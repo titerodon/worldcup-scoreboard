@@ -1,0 +1,27 @@
+.match {
+  display: flex;
+  justify-content: space-between;
+  &__info {
+    flex: 1 1 0px;
+    display: flex;
+    justify-content: space-between;
+    & > * {
+      width: 33%;
+    }
+    &-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-score {
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      place-content: center;
+    }
+  }
+  &__actions {
+    display: flex;
+    align-items: center;
+  }
+}
