@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Coding Exercise
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Instructions
 
-## Available Scripts
+Please provide the implementation of the Football World Cup Score Board as a simple library
 
-In the project directory, you can run:
+## Guidelines
 
-### `npm start`
+Keep it simple. Stick to the requirements and try to implement the simplest solution
+you can possibly think of that works and don't forget about edge cases.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Use an in-memory store solution (for example just use collections to store the
+  information you might require).
+- We are NOT looking for a REST API, a Web Service or Microservice. Just a simple
+  implementation.
+- Focus on Quality. Use Test-Driven Development (TDD), pay attention to OO design,
+  Clean Code and adherence to SOLID principles.
+- Approach. Code the solution according to your standards. Please share your solution
+  with a link to a source control repository (e.g. GitHub, GitLab, BitBucket) as we would
+  like you to see your progress (your commit history is important)
+- Add a README.md file where you can make notes of any assumption or things you
+  would like to mention to us about your solution.
+- The implementation in a frontend language must follow all of the above guidelines
+  and additionally you should apply the suggestions below:
+  _ If it is written it in a specific UI framework or library then we would suggest
+  writing the simplest component/s to serve the described functionality. Please
+  don’t spend time making it look good.
+  _ If it is written in plain JavaScript then we would suggest implementing the
+  solution as a simple service or module.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Football World Cup Score Board
 
-### `npm test`
+You are working on a sports data company, and we would like you to develop a new Live
+Football World Cup Score Board that shows matches and scores.
+The board supports the following operations:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1.  Start a game. When a game starts, it should capture (being initial score 0 – 0):
+    a. Home team
+    b. Away team
+2.  Finish game. It will remove a match from the scoreboard.
+3.  Update score. Receiving the pair score; home team score and away team score
+    updates a game score.
+4.  Get a summary of games by total score. Those games with the same total score will
+    be returned ordered by the most recently added to our system.
+    As an example, being the current data in the system:
 
-### `npm run build`
+    a. Mexico - Canada: 0 - 5
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    b. Spain - Brazil: 10 – 2
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    c. Germany - France: 2 – 2
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    d. Uruguay - Italy: 6 – 6
 
-### `npm run eject`
+    e. Argentina - Australia: 3 - 1
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The summary would provide with the following information:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    1.Uruguay 6 - Italy 6
+    2.Spain 10 - Brazil 2
+    3.Mexico 0 - Canada 5
+    4.Argentina 3 - Australia 1
+    5.Germany 2 - France 2
