@@ -1,6 +1,8 @@
 import ActionsBar from "../ActionsBar/ActionsBar";
 import "./Match.scss";
 import Flag from "../Flag/Flag";
+import Score from "../Score/Score";
+
 const Match = ({
   home,
   away,
@@ -17,11 +19,7 @@ const Match = ({
             <Flag country={home} />
             {home}
           </span>
-          <div className="match__info-score">
-            <span>{homeScore}</span>
-            <span>-</span>
-            <span>{awayScore}</span>
-          </div>
+          <Score home={homeScore} away={awayScore} />
           <span className="match__info-team">
             <Flag country={away} />
             {away}

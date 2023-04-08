@@ -76,7 +76,7 @@ const Scoreboard = () => {
                 away={match.away}
                 homeScore={match.homeScore}
                 awayScore={match.awayScore}
-                key={index}
+                key={`scoreboard-match-${match}`}
                 finishHandler={() => finishGame(match)}
                 updateHandler={() => updateScore(match)}
               />
