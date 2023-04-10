@@ -9,7 +9,7 @@ const Summary = ({ summaryData }) => {
           return (
             <div
               className="match__info"
-              key={`${match.home}-${match.away}`.toLowerCase()}
+              key={`summary-${match.home}-${match.away}`.toLowerCase()}
             >
               <span className="match__info-team">
                 <Flag country={match.home} />
