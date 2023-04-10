@@ -7,7 +7,10 @@ const Summary = ({ summaryData }) => {
       <div className="scoreboard__events">
         {summaryData.map((match, index) => {
           return (
-            <div className="match__info" key={`summary-match-${match}`}>
+            <div
+              className="match__info"
+              key={`${match.home}-${match.away}`.toLowerCase()}
+            >
               <span className="match__info-team">
                 <Flag country={match.home} />
                 {match.home}

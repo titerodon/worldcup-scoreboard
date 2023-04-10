@@ -69,14 +69,14 @@ const Scoreboard = () => {
           ]}
         />
         <div className="scoreboard__events">
-          {scoreboardData.map((match, index) => {
+          {scoreboardData.map((match) => {
             return (
               <Match
                 home={match.home}
                 away={match.away}
                 homeScore={match.homeScore}
                 awayScore={match.awayScore}
-                key={`scoreboard-match-${match}`}
+                key={`${match.home}-${match.away}`.toLowerCase()}
                 finishHandler={() => finishGame(match)}
                 updateHandler={() => updateScore(match)}
               />
